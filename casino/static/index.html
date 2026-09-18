@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cassino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Cassino</h1>
+      <div class="scoreboard">
+        <span id="sweeps"></span>
+      </div>
+      <button id="newDeal">New deal</button>
+    </header>
+
+    <p id="message" class="message"></p>
+
+    <section class="opponent-row">
+      <div class="label">Computer <span id="computerCount"></span></div>
+      <div id="computerHand" class="hand"></div>
+      <div class="pile-summary">Pile: <span id="computerPile"></span></div>
+    </section>
+
+    <section class="table-row">
+      <div class="label">Table <span class="talon">Stock: <span id="talonCount"></span> left</span></div>
+      <div id="table" class="table"></div>
+    </section>
+
+    <section class="hint">
+      <p id="hint">Select one or more cards from your hand, and — optionally — table cards whose values add up to
+        the same total, then press Play.</p>
+      <button id="clearSelection">Clear selection</button>
+      <button id="playMove" disabled>Play</button>
+    </section>
+
+    <section class="player-row">
+      <div class="label">You <span id="playerPile">Pile: </span></div>
+      <div id="hand" class="hand"></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

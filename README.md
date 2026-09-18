@@ -20,6 +20,20 @@ uv run pytest
 
 Without `uv`: `python -m pip install pytest`, then `python -m pytest`.
 
+## Play in the browser
+
+```sh
+uv run python -m casino.server
+```
+
+Without `uv`: `python -m casino.server`. This starts a small stdlib-only
+server at http://localhost:8000/ and opens it in your browser. Click cards
+in your hand and (optionally) cards on the table that add up to the same
+total, then press Play. The computer plays the moment it's its turn. Cards
+are drawn as plain styled divs rather than the Wikimedia SVG deck, to keep
+the project dependency-free — swap in real card art under `casino/static/`
+if you'd like.
+
 ## The interface the tests use
 
 ```python
